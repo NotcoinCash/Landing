@@ -1,0 +1,606 @@
+.container {
+    width: 100%; /* Займає всю ширину */
+    max-width: 1900px; /* Максимальна ширина */
+    flex-wrap: wrap;
+    height: 2825px; /* Висота автоматично */
+    margin: 0 auto; /* Центрує контейнер по горизонталі */
+    position: relative; /* Для внутрішніх абсолютних елементів */
+    transform-origin: top left; /* Встановлює точку масштабування */
+
+}
+
+
+    body {
+        background-color: #000101; /* Чорний фон із відтінком */
+        overflow-x: hidden;
+        
+    }
+    
+    /* Загальний стиль для всіх колечок */
+.colo {
+    position: absolute;
+    background: linear-gradient(to right, #677EFE, #111E61);
+    border-radius: 50%;
+    filter: blur(32.3px);
+}
+
+/* Базові розміри для великих екранів */
+.colo-large {
+    width: 330px;
+    height: 358px;
+}
+
+.colo-medium {
+    width: 219px;
+    height: 238px;
+}
+
+.colo-small {
+    width: 128px;
+    height: 139px;
+}
+
+.colo-mini {
+    width: 90px;
+    height: 98px;
+}
+
+/* Позиціонування кожного колечка */
+.colo1 { top: 202px; left: -4.05%;z-index: 2; }
+.colo2 { top: 522px; left: 82.47%;z-index: 2; }
+.colo3 { top: 104px; left: 32%; }
+.colo4 { top: -115px; left: 50%; transform: translateX(-50%); }
+.colo5 { top: 80px; left: 86.6%; }
+.colo6 { top: 400px; left: 67.11%; z-index: 2; }
+.colo7 { top: 455px; left: 31.05%; z-index: 2; }
+.colo8 { top: 926px; left: 68.75%; z-index: 2; }
+.colo9 { top: 882px; left: 6.42%; }
+.colo10 { top: 1200px; left: 27.68%; }
+.colo11 { top: 1325px; left: 78.94%; }
+.colo12 { top: 1625px; left: 40.52%; }
+.colo13 { top: 65.59%; left: -2.75%; }
+.colo14 { top: 71.50%; left: 57%; z-index: 1; }
+.colo15 { top: 68%; left: 92%; z-index: 1; }
+.colo16 { top: 100%; left: 25%; }
+.colo17 { top: 102%; left: 50%; }
+.colo18 { top: 110%; left: 85%; z-index: 1; }
+@media (max-width: 480px) {
+    .colo18 { top: 45%; left: 85%; z-index: 1; }
+    .colo17 { top: 48%; left: 50%; }
+    .colo16 { top: 30%; left: 25%; }
+    .colo15 { top: 36%; left: 92%; z-index: 1; }
+    .colo14 { top: 36.50%; left: 40%; z-index: 1; }
+    .colo13 { top: 36.59%; left: -15.75%; }
+    .colo12 { top: 54%; left: 79%; }
+ 
+}
+/* Присвоєння розмірів для кожного колечка */
+.colo1, .colo2, .colo4, .colo15 { 
+    width: 330px; height: 358px; /* великий розмір */
+}
+
+.colo3, .colo5, .colo8, .colo9, .colo10, .colo11, .colo12, .colo16, .colo18 {
+    width: 90px; height: 98px; /* міні розмір */
+}
+
+.colo6, .colo7 {
+    width: 128px; height: 139px; /* малий розмір */
+}
+
+.colo13, .colo14, .colo17 {
+    width: 219px; height: 238px; /* середній розмір */
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+    .colo-large { width: 150px; height: 170px; }
+    .colo-medium { width: 110px; height: 120px; }
+    .colo-small { width: 70px; height: 80px; }
+    .colo-mini { width: 50px; height: 60px; }
+}
+
+    .button {
+        position: absolute; 
+        width: 392px; /* Ширина кнопки */
+        height: 126px; /* Висота кнопки */
+        top: 260px; /* Відстань від верхньої частини */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 26px; /* Закруглені краї */
+        border: 4px solid #E2E3E4; /* Біле обрамлення */
+        background-color: transparent; /* Прозорий фон */
+        color: #FBFBFB; /* Колір тексту кнопки */
+        font-family: 'Ubuntu', sans-serif; /* Шрифт Ubuntu */
+        font-size: 32px; /* Розмір шрифту */
+        font-weight: 400; /* Наявність шрифту */
+        line-height: 39px; /* Висота рядка */
+        letter-spacing: -0.24px; /* Відстань між літерами */
+        text-align: center; /* Центрування тексту */
+        cursor: pointer; /* Курсор при наведенні */
+        padding: 24px 0; /* Внутрішні відступи */
+        opacity: 0.8;
+        z-index: 2;
+    }
+
+    @media (max-width: 480px) {
+        .button {
+            width: 260px; /* Ще зменшена ширина */
+            height: 80px; /* Ще зменшена висота */
+            font-size: 20px; /* Зменшений шрифт */
+            top: 240px; /* Підняти кнопку */
+            line-height: 25px;
+            padding-top: 12px; /* Ще менша висота рядка */
+        }
+    }
+    /* Для екранів до 480px */
+
+    .text {
+        position: absolute;
+        width: 400px;
+        height: 20px;
+        top: 165px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: Ubuntu, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: center;
+        color: #FFFFFF;        
+    }
+    @media (max-width: 480px) {
+        .text {
+            font-size: 30px; /* Ще менший розмір шрифту */
+            width: 400px; /* Зменшена ширина тексту */
+            top: 165px; /* Позиціюємо ще ближче до верху */
+            line-height: 20px; /* Коригуємо висоту рядка */
+        }
+    }
+    .text2{
+        position: absolute;
+        width: 1142px;
+        height: 46px;
+        top: 1240px;
+        left: 30%;
+        font-family: Ubuntu, sans-serif;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: center;
+        color: #949CB35E;
+      
+    }
+    @media screen and (max-width: 768px) {
+        .text2 {
+            width: 120%; /* Ширина на 80% від ширини екрану */
+            top: 1000px; /* Зменшення відступу зверху для компактності */
+            left:-9%; /* Вирівнювання по центру */
+            font-size: 48px; /* Зменшення розміру шрифту */
+            line-height: 24px;
+        }
+    }
+    
+    /* Адаптація для телефонів */
+    @media screen and (max-width: 480px) {
+        .text2 {
+            width: 120%; /* Ширина на 90% від ширини екрану */
+            top: 800px; /* Зменшення відступу зверху */
+            left: -9%; /* Вирівнювання по центру */
+            font-size: 32px; /* Ще менший шрифт для мобільних */
+            line-height: 20px;
+            
+        }
+    }
+    .text3 {
+        position: absolute;
+        width: 564px;
+        height: 146px;
+        top: 28%;
+        left: 145%;
+        font-family: Ubuntu, sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 51px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: left;
+        color: #949CB3;
+        z-index: 2;
+    }
+    @media screen and (max-width: 768px) {
+        .text3 {
+            width: 400px; /* Зменшення ширини для планшетів */
+            font-size: 30px; /* Зменшення шрифту */
+            top: 10%; /* Налаштування позиції для кращого вигляду */
+            left: 140%; /* Розміщення всередині екрану */
+        }
+    }
+    
+    /* Адаптація для телефонів */
+    @media screen and (max-width: 480px) {
+        .text3 {
+            width: 205px; /* Ще менша ширина для телефонів */
+            font-size: 15px; /* Дрібніший шрифт для маленьких екранів */
+            line-height: 30px;
+            top: 10%; /* Корекція відступу зверху */
+            left: 145%; /* Розміщення всередині екрану */
+        }
+    }
+
+    .text5{
+        position: absolute;
+        width: 594px;
+        height: 102px;
+        top: 106%;
+        left: 17%;
+        font-family: Ubuntu;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: left;
+        color:#FBFBFBBF;    
+    }
+    @media (max-width: 480px) {
+        .text5 {
+            width: 70%; /* Ширина тексту 90% від ширини екрану */
+            font-size: 13px; /* Менший розмір шрифта для мобільних пристроїв */
+            line-height: 18px; /* Зменшений міжрядковий інтервал */
+            top: 51%; /* Зменшення відступу зверху */
+            left: 9%; /* Зменшений лівий відступ */
+            height: 15%;
+            
+        }
+    }
+    
+
+.Group, .Group2, .telegram, .telegram2, .twitter, .twitter2, .reddit, .reddit2, .book {
+    position: absolute;
+    width: 56px; /* Стандартна ширина */
+    height: 56px; /* Стандартна висота */
+    top: 1%;
+}
+
+/* Іконки */
+.Group {
+    width: 71px;
+    height: 100%;
+    top: 1%;
+    left: 5.68%;
+}
+
+.Group2 {
+    width: 71px;
+    height: 61px;
+    top: 110%;
+    left: 5.68%;
+}
+
+.telegram { left: 80.65%; }
+.telegram2 { top: 110%; left: 82%; }
+.twitter { left: 85.51%; }
+.twitter2 { top: 110%; left: 86.80%; z-index: 2; }
+.reddit { left: 90%; }
+.reddit2 { top: 110%; left: 91.47%; }
+.book { top: 1.50%; left: 95%; }
+
+/* Медіа-запити для планшетів та телефонів (до 768px) */
+@media screen and (max-width: 900px) {
+    .Group, .Group2, .telegram, .telegram2, .twitter, .twitter2, .reddit, .reddit2, .book {
+        width: 45px; /* Зменшення ширини для планшетів та телефонів */
+        height: 45px; /* Зменшення висоти */
+    }
+
+    .telegram { left: 70%; }
+    .telegram2 { left: 77%; }
+    .twitter { left: 78%; }
+    .twitter2 { left: 80%; }
+    .reddit { left: 85%; }
+    .reddit2 { left: 84%; }
+    .book { left: 93%; }
+}
+
+/* Для дуже маленьких екранів (менше 480px) */
+@media screen and (max-width: 500px) {
+    .Group, .Group2, .telegram, .telegram2, .twitter, .twitter2, .reddit, .reddit2, .book {
+        width: 35px; /* Ще менше для маленьких телефонів */
+        height: 35px; /* Ще менше */
+        transform: scale(0.88)
+    }
+
+    .telegram { left: 50%; }
+    .telegram2 { left: 63%;top:53.1% }
+    .twitter { left: 62%; }
+    .twitter2 { left: 73.8%;top:53.1% }
+    .reddit { left: 75%; }
+    .reddit2 { left: 85%;top:53.1% }
+    .book { left: 90%; }
+    .Group2 {left:1%;top:53%; transform:scale(0.77)}
+}
+
+
+    .iphone {
+        position: absolute;
+        width: 492px;
+        height: 739px;
+        top: 12%;
+        left: 38%;
+        z-index: 1;
+    }
+    /* Адаптація для планшетів */
+    @media screen and (max-width: 768px) {
+        .iphone {
+            transform: scale(0.7); /* Масштаб до 70% для планшетів */
+            top: 15%; /* Корекція відступу зверху */
+            left: 20%; /* Корекція відступу зліва */
+            transform-origin: top left; /* Щоб зберегти позицію з верхнього лівого кута */
+        }
+    }
+    
+    /* Масштабування для телефонів */
+    @media screen and (max-width: 480px) {
+        .iphone {
+            transform: scale(0.5); /* Масштаб до 50% для телефонів */
+            top: 13%; /* Корекція відступу зверху */
+            left: 13%; /* Корекція відступу зліва */
+            transform-origin: top left; /* Зберігаємо прив'язку до верхнього лівого кута */
+        }
+    }
+
+
+    .phones {
+        position: absolute;
+        width: 630px;
+        height: 420px;
+        left: 5%; 
+        top: 1300px;
+        z-index: 1;
+    }
+    .phones img {
+        width: 150%; /* Забезпечує масштабування зображення за контейнером */
+        height: auto; /* Зберігає пропорції */
+    }
+ 
+    
+    /* Адаптація для планшетів */
+    @media screen and (max-width: 800px) {
+        .phones {
+            transform: scale(1.10);
+            width: 300px; /* Зменшення ширини */
+            height: auto; /* Встановлення автоматичної висоти для пропорційного зменшення */
+            top: 39%;
+            left: -5%;
+        }
+    }
+    
+    /* Адаптація для телефонів */
+    @media screen and (max-width: 480px) {
+        .phones {
+            transform: scale(0.9);
+            width: 150px; /* Ще менша ширина */
+            top: 30%;
+            left: -8%;
+        }
+    }
+    .purple {
+        position: absolute;
+        width: 2000px;
+        height: 72px;
+        top: 74%;
+        left: -1%;
+        background-color: #677EFE;
+        transform: rotate(2.48deg);
+        z-index: 2;
+    }
+    
+    /* Text pur1 */
+    .textpur1 {
+        position: absolute;
+        width: 1000px;
+        height: 51px;
+        top: 15%;
+        left: -1%;
+        font-family: Ubuntu;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 51px;
+        letter-spacing: -0.24px;
+        text-align: center;
+        transform: rotate(0.001deg);
+        color: #FBFBFB;
+        z-index: 2;
+    }
+    
+    /* Text pur2 */
+    .textpur2 {
+        position: absolute;
+        width: 1000px;
+        height: 51px;
+        top: 15%;
+        left: 47%;
+        font-family: Ubuntu;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 51px;
+        letter-spacing: -0.24px;
+        text-align: center;
+        transform: rotate(0.001deg);
+        color: #FBFBFB;
+        z-index: 2;
+    }
+    
+    /* Media Queries for responsiveness */
+    
+    /* For screens smaller than 1200px */
+    @media (max-width: 1199px) {
+        .purple {
+            width: 1000px;
+        }
+        
+        .textpur1, .textpur2 {
+            width: 80%;
+            font-size: 45px;
+            height: 40px;
+            line-height: 40px;
+        }
+    
+        .textpur2 {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    
+    /* For screens smaller than 768px */
+    @media (max-width: 767px) {
+        .purple {
+            width: 800px;
+            height: 60px;
+            top: 55%;
+            left: -1;
+        }
+    
+        .textpur1{
+            width: 90%;
+            font-size: 35px;
+            height: 35px;
+            line-height: 35px;
+            left: 40%;
+        }
+    
+        .textpur2 {
+            left: 10%;
+            width: 90%;
+            font-size: 35px;
+            height: 35px;
+            line-height: 35px;
+            transform: translateX(-50%);
+        }
+    }
+    
+    /* For screens smaller than 480px */
+    @media (max-width: 480px) {
+        .purple {
+            width: 600px;
+            height: 50px;
+            top: 38%;
+            left: -6%;
+        }
+        
+        /* Separate styles for textpur1 */
+        .textpur1 {
+            width: 90%;
+            font-size: 28px;
+            height: 30px;
+            line-height: 30px;
+            left: -100%; /* Adjust the position of textpur1 */
+        }
+    
+        /* Separate styles for textpur2 */
+        .textpur2 {
+            width: 90%;
+            font-size: 28px;
+            height: 30px;
+            line-height: 30px;
+            left: 40%;
+            transform: translateX(-50%); /* Center textpur2 */
+        }
+    }
+    
+    
+    .poster {
+        position: absolute;
+        width: 1224px;
+        height: 445px;
+        top: 82%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 28px;
+        background: linear-gradient(to right, #677EFE, #3E4B98);
+       
+    }
+    .button2 {
+        position:absolute;
+        width: 392px;
+        height: 126px;
+        top: 232px;
+        left: 207px;
+        padding: 24px;
+        gap: 9px;
+        border-radius: 26px;
+        border: 4px;
+        background-color: transparent;
+        border: 4px solid #E2E3E4;
+        color: #FBFBFB;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 22px; /* Розмір шрифту */
+        font-weight: 400; /* Наявність шрифту */
+        line-height: 39px;
+        letter-spacing: -0.24px;
+        text-align: center;
+        cursor: pointer;
+        padding: 24px ;
+        
+    }
+    .iphone16 {
+        position: absolute;
+        width: 353px;
+        height: 849px;
+        top: 20px;
+        left: 794px;
+    
+    }
+    .text4 {
+        position: absolute;
+        width: 564px;
+        height: 102px;
+        top: 90px;
+        left: 121px;
+        font-family: Ubuntu;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 51px;
+        letter-spacing: -0.23999999463558197px;
+        text-align: center;
+        color: #FBFBFB;
+        
+    }
+@media (max-width: 480px) {
+    .poster {
+        width: 90%; /* Ширина у відсотках для гнучкості */
+        height: 300px; /* Автоматична висота */
+        top: 43%; /* Ще вище для зручності перегляду */
+        border-radius: 16px;
+        height: 200px;
+    }
+}
+@media (max-width: 480px) {
+    .button2 {
+        width: 165px; /* Ще зменшена ширина */
+        height: 60px; /* Ще зменшена висота */
+        font-size: 13px; /* Зменшений шрифт */
+        top: 49%; /* Підняти кнопку */
+        line-height: 25px;
+        padding-top: 1px; /* Ще менша висота рядка */
+        left: 7%
+    }
+}
+@media (max-width: 480px) {
+    .text4 {
+        width:150px;
+        height: 80px;
+        font-size: 16px; /* Ще менший розмір шрифту */
+        line-height: 20px; /* Зменшення міжрядкового інтервалу */
+        top: 20%; /* Зменшення відступу зверху */
+        left:9%;
+    }
+}
+@media (max-width: 480px) {
+    .iphone16 {
+        width: 100%; /* Ширина зображення 100% від ширини екрану */
+        height: auto; /* Висота автоматично змінюється, зберігаючи пропорції */
+        top: -60%; /* Відступ зверху */
+        left: 75%; /* Центрування по горизонталі */
+        transform: translateX(-50%) scale(0.333); /* Центруємо і зменшуємо зображення до 80% */
+    }
+}
